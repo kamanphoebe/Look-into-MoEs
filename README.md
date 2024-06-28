@@ -1,6 +1,6 @@
 # A Closer Look into MoEs in LLMs
 
-This repository contains the code of [A Closer Look into Mixture-of-Experts in Large Language Models]().
+This repository contains the code of [A Closer Look into Mixture-of-Experts in Large Language Models](https://arxiv.org/abs/2406.18219).
 
 ## Overview :eyes:
 
@@ -11,7 +11,7 @@ Concretely, we comprehensively study the parametric and behavioral features of t
     Intuitively, the gate embedding determines the expert selection while the gate projection matrix of expert is responsible for choosing neurons to activate. Interestingly, their similarity values show association as described in the table below (X and Y denotes the similarity values of the gate embedding and the three projection matrices, respectively).
     Therefore, they may learn similar knowledge to perform the choosing operation reasonably, in the other words, the expert neurons are fine-grained experts.
 
-    <img src='./images/pearson.png' alt='Deep and last layers' width='350'>
+    <img src='./images/pearson.png' alt='Squared Pearson coefficient' width='350'>
 
 - **The router of MoE usually selects experts with larger output norms.** \
     Using Mixtral as an example here, we find that the expert that outputs feature vector with the *i*-th largest norm is the most likely to be assigned with the *i*-th highest score by the gate. 
@@ -51,11 +51,24 @@ Based on the observations, we also provide suggestions for a broad spectrum of M
 
 The two Jupyter notebooks `static_analysis.ipynb` and `dynamic_analysis.ipynb` contains the code of experiments about the static parameters and dynamic behaviours, respectively.
 You can simply run the corresponding code blocks for each experiment, which is titled the same as in the paper. 
-Note that some experiments employ part of the [Wikitext 103 test set](), which we have already provided in the `wikitext103_text.csv`.
-
+Note that some experiments employ part of the [Wikitext 103 test set](https://huggingface.co/datasets/Salesforce/wikitext), which we have already provided in the `wikitext103_text.csv`.
 
 ## Citation :star2:
 
 Please cite our work if you find it useful!
 ```
+@misc{lo2024closerlookmixtureofexpertslarge,
+      title={A Closer Look into Mixture-of-Experts in Large Language Models}, 
+      author={Ka Man Lo and Zeyu Huang and Zihan Qiu and Zili Wang and Jie Fu},
+      year={2024},
+      eprint={2406.18219},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2406.18219}, 
+}
 ```
+
+## Acknowledgement :tada:
+
+Our configuration and modeling files of the models are borrowed from the corresponding HuggingFace repositories as listed in the [Setup](https://github.com/kamanphoebe/Look-into-MoEs/tree/main?tab=readme-ov-file#setup-wrench) section. 
+Thanks for the authors' great work!
