@@ -57,18 +57,15 @@ Note that some experiments employ part of the [Wikitext 103 test set](https://hu
 
 Please cite our work if you find it useful!
 ```
-@misc{lo2024closerlookmixtureofexpertslarge,
-      title={A Closer Look into Mixture-of-Experts in Large Language Models}, 
-      author={Ka Man Lo and Zeyu Huang and Zihan Qiu and Zili Wang and Jie Fu},
-      year={2024},
-      eprint={2406.18219},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2406.18219}, 
+@article{lo2024closer,
+  title={A Closer Look into Mixture-of-Experts in Large Language Models},
+  author={Lo, Ka Man and Huang, Zeyu and Qiu, Zihan and Wang, Zili and Fu, Jie},
+  journal={arXiv preprint arXiv:2406.18219},
+  year={2024}
 }
 ```
 
 ## Acknowledgement :tada:
 
-Our configuration and modeling files of the models are borrowed from the corresponding HuggingFace repositories as listed in the [Setup](https://github.com/kamanphoebe/Look-into-MoEs/tree/main?tab=readme-ov-file#setup-wrench) section. 
+Our configuration and modeling files of the models are modified based on the corresponding HuggingFace repositories as listed in the [Setup](https://github.com/kamanphoebe/Look-into-MoEs/tree/main?tab=readme-ov-file#setup-wrench) section. 
 Thanks for the authors' great work!
