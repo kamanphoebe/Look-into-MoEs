@@ -11,19 +11,19 @@ Concretely, we comprehensively study the parametric and behavioral features of t
     Intuitively, the gate embedding determines the expert selection while the gate projection matrix of expert is responsible for choosing neurons to activate. Interestingly, their similarity values show association as described in the table below (X and Y denotes the similarity values of the gate embedding and the three projection matrices, respectively).
     Therefore, they may learn similar knowledge to perform the choosing operation reasonably, in the other words, the expert neurons are fine-grained experts.
 
-    <img src='./images/pearson.png' alt='Squared Pearson coefficient' width='350'>
+    <img src='./assets/pearson.png' alt='Squared Pearson coefficient' width='350'>
 
 - **The router of MoE usually selects experts with larger output norms.** \
     Using Mixtral as an example here, we find that the expert that outputs feature vector with the *i*-th largest norm is the most likely to be assigned with the *i*-th highest score by the gate. 
     (In the figure, larger ranking index means larger norm/score, so rank 8 is the largest.)
 
-    <img src='./images/rank_count.png' alt='Norm-score rank counting' width='400'>
+    <img src='./assets/rank_count.png' alt='Norm-score rank counting' width='400'>
 
 - **The expert diversity increases as the layer increases, while the last layer is an outlier.** \
     In several experiments, we observe that the similarities between experts are generally lower in deep layers, whereas the similarities increase in the last layer(s). 
     For instance, the figure below shows the similarity heat maps of the Mixtral experts' outputs of different layers, where the comparison of the values is: Layer 31 > Layer 6 > Layer 27.
 
-    <img src='./images/last_layer.png' alt='Deep and last layers' width='350'>
+    <img src='./assets/last_layer.png' alt='Deep and last layers' width='350'>
 
 Based on the observations, we also provide suggestions for a broad spectrum of MoE practitioners, such as router design and expert allocation. 
 **Check out our paper for more inspiring observations and suggestions!**
@@ -56,7 +56,7 @@ Note that some experiments employ part of the [Wikitext 103 test set](https://hu
 ## Citation :star2:
 
 Please cite our work if you find it useful!
-```
+```bibtex
 @article{lo2024closer,
   title={A Closer Look into Mixture-of-Experts in Large Language Models},
   author={Lo, Ka Man and Huang, Zeyu and Qiu, Zihan and Wang, Zili and Fu, Jie},
