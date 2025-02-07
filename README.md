@@ -5,7 +5,7 @@ This repository contains the code of [A Closer Look into Mixture-of-Experts in L
 ## Overview :eyes:
 
 We make an initial attempt to understand the inner workings of MoE-based large language models. 
-Concretely, we comprehensively study the parametric and behavioral features of three recent MoE-based models ([Mixtral 8x7B](https://arxiv.org/pdf/2401.04088), [DeepSeekMoE](https://arxiv.org/pdf/2401.06066), [Grok-1](https://github.com/xai-org/grok-1)) and reveal some intriguing observations, including:
+Concretely, we comprehensively study the parametric and behavioral features of three recent MoE-based models ([Mixtral 8x7B](https://arxiv.org/pdf/2401.04088), Mixtral 8x22B, [DeepSeekMoE](https://arxiv.org/pdf/2401.06066), [Grok-1](https://github.com/xai-org/grok-1)) and reveal some intriguing observations, including:
 
 - **Neurons act like fine-grained experts.** \
     Intuitively, the gate embedding determines the expert selection while the gate projection matrix of expert is responsible for choosing neurons to activate. Interestingly, their similarity values show association as described in the table below (X and Y denotes the similarity values of the gate embedding and the three projection matrices, respectively).
@@ -34,6 +34,7 @@ Based on the observations, we also provide suggestions for a broad spectrum of M
     By default, our code loads the pre-downloaded models from the `ckpt` directory. 
     You can also modify it to directly download from HuggingFace. The download links of the models we used are listed below:
     - [Mixtral 8x7B Base](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)
+    - [Mixtral 8x22B Base](https://huggingface.co/mistralai/Mixtral-8x22B-v0.1)
     - [Mixtral 8x7B Instruct](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1)
     - [Mistral](https://huggingface.co/mistralai/Mistral-7B-v0.1)
     - [DeepSeekMoE](https://huggingface.co/deepseek-ai/deepseek-moe-16b-base)
